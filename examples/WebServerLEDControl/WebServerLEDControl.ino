@@ -60,15 +60,7 @@ void setup() {
   // now that we have a good ethernet connection we can start the server
   server.begin();
   Serial.print("The server can be accessed at: ");
-  IPAddress ip = Ethernet.localIP();
-  ipAddress += ip[0];
-  ipAddress+= ".";
-  ipAddress += ip[1];
-  ipAddress += ".";
-  ipAddress += ip[2];
-  ipAddress += ".";
-  ipAddress += ip[3];
-  Serial.println(ipAddress);
+  Serial.println(Ethernet.localIP());
 }
  
 void loop() {
